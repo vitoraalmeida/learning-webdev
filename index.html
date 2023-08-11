@@ -1,0 +1,208 @@
+<!-- Diz ao browser que estamos usando a ultima versão do html -->
+<!-- Deve ser a primeira coisa dentro de arquivos html-->
+<!DOCTYPE html>
+<!-- Todo código html vai dentro desse elemento-->
+<!-- Elementos são componentes do HTML que usamos para definir o que são os conteúdos que colocamos-->
+<!-- no site e como eles deve mser renderizados.-->
+<!-- o elemento <p>conteudo</p> define que aquele conteúdo deve ser endentido pelo browser-->
+<!-- como um paragrafo de texto e o <p> é uma tag de abertura e </p> de fechamento-->
+<html>
+    <!-- podemos adicionar elementos dentro de elementos-->
+    <!-- Os únicos elementos filhos do html são o head e body-->
+    <!-- Elemento para conter metadados-->
+    <head>
+        <!-- Uma das funções do title é prover o titulo na aba do browser
+        Bem como é usado para indexar nos mecanismos de busca -->
+        <title>Isso é um título</title>
+    </head>
+    <!-- O conteúdo do site, onde a maior parte do código é escrito-->
+    <body>
+        <!-- Alguns Elementos podem não necessitar de tags de abertura e fechamento, sendo self-closing -->
+        <!-- O elemento <em></em> dá ênfase a um texto e é renderizado como itálico-->
+        <!-- <br /> adiciona uma quebra de linha num texto, pois espaços em branco no código não são renderizados na página-->
+        <p>Isso é um <br /> <em>texto</em></p> 
+        <p><strong>Esse texto está sendo destacado</strong></p>
+        <p><strong>Cuidado</strong> as tags devem ser usadas conforme seu propósito semantico</p>
+        <!-- O <strong> também dá ênfase no texto, mas é renderizado em negrito, para dar mais importância ainda -->
+        <hr /> <!--o hr cria uma linha horizontal na página, para separar conteudos-->
+        <!-- O elemento <a></a> cria um link para outra página (hipertexto) e necessita do atributo "href" -->
+        <!-- Atributos modificam o comportamento de um elemento. No caso do "href", ele define para qual página 
+        aquele link redireciona. Atributos possuem seu nome (chave) e valores -->
+        <a href="https://www.google.com" title="Site do google" target="_blank"> Isso é um link </a> <!-- Sem o href, a tag <a> não faz nada além de mostrar o texto-->
+
+        <!-- title = atributo que explica a que se refere o link | quando posicionamos o mouse no link, será mostrado na tela | usado também para acessibilidade-->
+        <!-- target="_blank" faz com que quando clicarmos no link, abra a pagina em outra aba do browser-->
+        <!-- Atributos não funcionam em qualquer elemento-->
+        
+        <!-- Alguns elementos são renderizados como um bloco, ou seja tomam a linha inteira da página
+        outros são renderizados como partes de uma linha -->
+        <!-- O elemento <p></p> é um elemento de bloco e o <a></a> de linha-->
+        <p> Esse texto aparecerá numa linha só dele</p>
+        <p> Esse texto aparecerá numa linha só dele</p>
+        <a> Esse link aparecerá ao lado de quaisquer outros links</a>
+        <a> Como esse</a>
+        <a> E esse </a>
+        <!-- Elementos de cabeçalho são usados para definir seções no texto com importância diferentes
+        Como em páginas de jornal títulos maiores são usados para guiar o leitor para onde ele deve olhar primeiro-->
+        <!-- Os cabeçalhos html são definidos de forma que quando maior menos importância, ou de forma que o valor
+        define a classificação em ordem de importância -->
+        <h1>O mais importante</h1>
+        <h2>O segundo mais importante</h2>
+        <h3>O terceiro mais importante</h3>
+        <h4>O quarto mais importante</h4>
+        <h5>O quinto mais importante</h5>
+        <h6>O sexto mais importante</h6>
+
+        <p>Podemos criar listas ordenadas</p>
+        <ol> <!-- o= ordered l = list-->
+            <li>Item 1</li> <!-- li = list item-->
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <p>Podemos criar listas e sem ordenação</p>
+        <ul> <!-- u = unordered l = list-->
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+        <p>Podemos criar listas dentro de listas</p>
+        <ol> <!-- u = unordered l = list-->
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </ol>
+
+        <!-- podemos utilizar o atributo global (único) "id" para identificar um elemento e nos referenciarmosa ele-->
+        <ol>
+            <li>
+                <!-- Clicando no link, seremos levado a onde começa o elemento marcado com o id especificado. Usamos # para especificar que é um id-->
+                <a href="#sessao1">Seção 1</a>
+            </li>
+            <li>
+                <a href="#sessao2">Seção 2</a>
+            </li>
+            <li>
+                <a href="#sessao3">Seção 3</a>
+            </li>
+        </ol>
+        <h2 id="sessao1">Sessão 1</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid asperiores quisquam voluptatum! Sit explicabo, laboriosam ad iure doloribus rem ducimus sint sunt laudantium veritatis fuga excepturi minus quo tenetur repellat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cum cupiditate illo quisquam suscipit rem, explicabo excepturi fugit blanditiis, adipisci ut temporibus possimus, delectus esse labore a error porro veritatis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi adipisci architecto, tempora voluptatum minima nemo corporis odio, id ipsum quod natus rerum explicabo accusamus et distinctio iure eveniet quae vitae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta inventore velit nesciunt voluptates delectus, quasi fugiat, eaque reprehenderit neque beatae distinctio sint sunt itaque, placeat harum accusantium minus cumque rem! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum molestiae vero quia ipsum sapiente fugit dolore molestias velit soluta nihil autem, voluptates ratione incidunt, eligendi architecto nobis ipsa praesentium ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia impedit rem nam nisi deserunt. Explicabo labore delectus odit dolorem voluptatum vel unde dicta nobis repudiandae impedit, fugit tempora, soluta ut!</p>
+        <h2 id="sessao2">Sessão 2</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem quis deleniti, provident obcaecati temporibus dignissimos unde in, accusamus ipsa officiis perspiciatis, repellendus expedita laborum ex molestias ipsam hic facere ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ea expedita. Dolores quaerat molestiae voluptas nam quisquam quod sapiente quos debitis, alias accusamus illo necessitatibus temporibus magnam! Numquam, repudiandae quas. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, laboriosam sapiente. Quaerat expedita modi assumenda? Corrupti, ullam harum, ipsa ex aut totam expedita reiciendis eos voluptate fugit assumenda dolor quis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta inventore velit nesciunt voluptates delectus, quasi fugiat, eaque reprehenderit neque beatae distinctio sint sunt itaque, placeat harum accusantium minus cumque rem! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum molestiae vero quia ipsum sapiente fugit dolore molestias velit soluta nihil autem, voluptates ratione incidunt, eligendi architecto nobis ipsa praesentium ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia impedit rem nam nisi deserunt. Explicabo labore delectus odit dolorem voluptatum vel unde dicta nobis repudiandae impedit, fugit tempora, soluta ut!</p>
+        <h2 id="sessao3">Sessão 3</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta inventore velit nesciunt voluptates delectus, quasi fugiat, eaque reprehenderit neque beatae distinctio sint sunt itaque, placeat harum accusantium minus cumque rem! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum molestiae vero quia ipsum sapiente fugit dolore molestias velit soluta nihil autem, voluptates ratione incidunt, eligendi architecto nobis ipsa praesentium ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia impedit rem nam nisi deserunt. Explicabo labore delectus odit dolorem voluptatum vel unde dicta nobis repudiandae impedit, fugit tempora, soluta ut!</p>
+        <!-- Podemos colocar imagens com origem tanto local quanto de outros sites-->
+        <img src="/public/vitor.jpeg" alt="texto de alternativa se a imagem nao abrir ou para leitores de tela" width="50" height="50">
+        <!-- E utlizar imagens como links-->
+        <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-13">
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="foto vitor">
+        </a>
+        <video src="/public/video-exemplo.mp4" width="1024" height="980" controls><p>ALternativa caso o video não abra</p></video>
+        
+        <!-- Existe uma semantica no uso dos elementos html, ou seja, devemos usar os elementos da forma que foram feitos para serem usados
+        isso ajuda outras pessoas a entenderem o código, otimiza o site em mecanismos de busca e SEO, ajuda em ferramentas
+        acessiblidade, e ajuda na estilização do site, pois podemos selecionar quais partes do site específicas queremos que tenha aquele estilo específco-->
+
+        <!-- O elemento div é usado para agrupar conteúdos, porém é um container genérico sem semantica-->
+        <!-- Tanto ele quanto outros containers mais específicos não alteram o conteúdo nem estilo por si próprios, mas podem ser alterados por css-->
+        <div>
+            <p></p>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <!-- O elemento header é usado para fazer uma seção introdutória ou informativa de uma página ou seção-->
+        <header>
+            <h2>Meu site</h2>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
+        </header>
+
+        <!-- nav agrupa uma lista de links-->
+        <header>
+            <h2>Meu site</h2>
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- main conteudo principal do site, exceto o header e footer, todo o restante vai no main, deve ser um por página-->
+        <header></header>
+        <main>
+        </main>
+        <footer></footer>
+
+        <!-- article - uma seção da página que agrupa conteudos relacionados que existe de forma independente-->
+        <article></article>
+
+        <!-- section agrupa conteúdos relacionados, mas tem pouco valor semântico. Normalmente usado dentro de um article para agrupar
+             elementos que façam sentido em conjunto-->
+        <article>
+            <h3> Como funciona a internet</h3>
+            <section id="metadados">
+                <p>Autor> Fulano</p>
+                <p>Data de criação: </p>
+                <p>tempo de leitura estimada: </p>
+            </section>
+        </article>
+
+        <!-- footer o fim do body da página - normalmente contém informações de contato ou alguma navegação -->
+        <footer></footer>
+
+        <!-- forms - principal forma de interação entre usuários e o site-->
+        <form action="">
+            <!-- por padrão, inputs são to tipo inline, então vai ficar na mesma linha. Podemos fazer uma lista em que cada item seja um item do form,
+                assim ficam cada campo numa linha diferente-->
+            <ul>
+                <li>
+                    <!-- temos diversos tipos de campos e cada campo pode ter configurações já predefinidas, como senhas os caracteres ficam ocultos
+                         datetime mostra um calendário, file um botão que interage com a máquina do usuário para selecionar arquivo -->
+                    <!-- é boa prática adicionar labels a cada campo do formulário para expericência do usuário e legibilidade-->
+                    <label for="firstName"> Primeiro nome</label>
+                    <input id="firstName" type="text" placeholder="Entre com seu nome">
+                </li>
+
+                <li>
+                    
+                    <label for="confirmPolicy">Li e aceito os termos de serviço</label>
+                    <input id="confirmPolicy" type="checkbox">
+                </li>
+
+                <li>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="Entre com seu email">
+                </li>
+
+                <li>
+                    <label for="password">Senha</label>
+                    <input id="password" type="password">
+                </li>
+
+                <li>
+                    <label for="uploadPhoto">Foto de perfil</label>
+                    <input id="uploadPhoto" type="file">
+                </li>
+
+                <li>
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="10" cols="40"></textarea>
+                </li>
+            </ul>
+        </form>
+        <button type="button">botão genérico</button>
+        <button type="submit">Enviar</button>
+    </body>
+</html>
