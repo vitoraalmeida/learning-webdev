@@ -1,0 +1,91 @@
+/* selector { property: value;} -> rule set */
+h2 { /* { property:value;} -> declaration block */
+    /*property: value; -> declaration */
+    color: cadetblue;
+}
+
+/* podemos aplicar estilos apenas nos elementos que tiverem um
+atributo de classe específico*/
+.h2Diferente {
+    color: brown;
+}
+
+/* também podemos aplicar estilos com base em atributos de id*/
+#titleId {
+    color: burlywood;
+}
+
+/* podemos selecionar elementos pelos atributos */
+[href] {
+    color: chartreuse;
+}
+
+/* podemos aplicar o mesmo estilo a elementos diferentes ao mesmo tempo */
+p, ul {
+    color: darkmagenta;
+}
+
+/* Siblings são elementos que estão no mesmo nível, dentro do mesmo bloco*/
+/*  Adjacent sibling - aplica o estilo apenas se o segundo seletor estiver presente na página exatamente após o primeiro */
+.li1 + .li2 {
+    color:darkgoldenrod
+}
+/* não funciona, pois o .li4 não está imediatamente após o .li1 */
+.li1 + .li4 {
+    color:darkcyan;
+}
+
+/* General Sibling, seleciona sem a limitação de ser imediatamente após */
+.li1 ~ .li4 {
+    color: darkcyan;
+}
+
+/* não funciona, pois o elemento com a classe .li5 está dentro de um div num nível abaixo dos outros li*/
+.li1 ~ .li5 {
+    color: darkcyan;
+}
+
+/*child selector -  se aplica apenas aos elementos com classe .li4 dentro de um div, diretamente, sem estar aninhado em outro bloco*/
+div > .li4 {
+    color: darkcyan;
+}
+
+/*descentent combinator- se aplica a qualquer elemento dentro de outro, incluindo filhos e netos*/
+ul .li5 {
+    color: red;
+}
+
+/* seletor universal */
+* {
+    font-size: 20px;
+    /* o ultimo seletor aplicado será o utilizado, se sobreponto aos demais;
+      a não ser que outros seletores mais específicos existam
+      ordem de especificidade -> atributo style > id > classe > seletores de elemento*/
+    /*color: red;*/
+}
+
+/* não funciona, pois o elemento h1 tem um stributo style com outra cor */
+h1 {
+    color: aquamarine;
+}
+
+/* o body de uma página html é do tamanho do conteúdo, não da tela
+   porém, aplicando o background-color ao body, toda a tela será 
+   pintada com a cor. Não há uma justificativa para isso*/
+body {
+    background-color: bisque;
+    /* fonts são adicionadas no html */
+    font-family: 'Inconsolata', monospace;
+}
+
+/* mesmo assim, se aplicarmos o background color ao html, ele toma à frente 
+   do body e o background do body fica com a cor preenchendo a área correta 
+   dele. A boa prática é não dar cor para o html*/
+html {
+    background-color: rgb(175, 148, 114);
+}
+
+p {
+    font-style: italic; /* muda o estilo para todo o texto */
+    font-weight: 700; /* a grossura do texto, boldness */
+}

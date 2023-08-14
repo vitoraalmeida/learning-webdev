@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <!-- É possível adicionar CSS na página usando um arquivo externo de estilos - external-->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- É possível adicionar CSS na página usando a tag style - internal-->
+    <!-- <style>
+        h2 {
+            color: blueviolet;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- É possível adicionar CSS na página usando o atributo style-->
+    <h1 style="color: blue;">Olá</h1>
+    <h2>Mundo</h2>
+    <!-- O estilo aplicado obedecerá a ordem de precedência: 1- Atributo, 2- Tag style e 3- arquivos externos    -->
+    <h2 class="h2Diferente">Diferente</h2>
+    <h2 id="titleId">Seletor ID</h2>
+    <a href="">helloworld</a>
+    <p>Paragrafo</p>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
+    <ul>
+        <li class="li1">item 1 adjacent sibling</li>
+        <li class="li2">item 2 adjacent sibling</li>
+        <li class="li3">item 3 adjacent sibling</li>
+        <li class="li4">item 4 adjacent sibling</li>
+        <div>
+            <li class="li4">item 4.2 not adjacent sibling</li>
+            <li class="li5">item 5 not adjacent sibling</li>
+        </div>
+    </ul>
+    
+</body>
+</html>

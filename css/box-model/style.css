@@ -1,0 +1,62 @@
+* {
+    /* margens são espaços externos ao redor do elemento*/
+    /* usadas para criar distância entre elementos*/
+    margin: 0;
+}
+h1 {
+    margin: 40px;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 30px;
+    /* equivalente a: */
+    /*margin: 10px 30px 20px 15px; */
+    /*top-bottom left-right:*/
+    /*margin: 10px 25px; */
+    /* top bottom left-right */
+    /*margin: 10px 15px 20px; */
+}
+
+.title {
+    margin: 50px;
+    /* padding adiciona espaço dentro do elemento (ao redor do conteudo)*/
+    background-color: pink;
+    padding: 50px;
+}
+
+button {
+    all: unset;
+    font-size: 24px;
+    margin: 50px;
+    background-color: pink;
+    padding: 16px;
+    /* bordas são usadas por causa de decisão de design*/
+    border: 5px solid black;
+    /* width e height definem a largura e altura do espaço do espaço reservado ao conteudo */
+    width: 300px;
+    height: 100px;
+    /* se um width ou height menores que o tamanho do conteúdo (ex. texto) forem definidos
+       pode ser que o conteudo fica fora das cores, bordas etc definidas */
+    /* width: 10px; */
+    
+    /* o tamanho do elemento final é a soma dos atributos do box model
+       então se o elemento inteiro deve ter um tamanho máximo na tela, temos
+       que nos atentar que o tamanho final não é simplesmente o width e height
+       largura total = 300 + 16 + 16 (padding) + 5 + 5 (border)
+       altura total = 100 + 16 + 16 + 5 + 5
+       área total = 342 * 142
+       */
+    /* box-sizing: content-box é o comportamente padrão descrito acima */
+    box-sizing: content-box;
+    /* border-box usa os valores do width e height como um limite de tamanho para todo 
+       o elemento, de forma que é somado o valor da borda + padding e o restante (conteúdo)
+       será o que restar do width e height subtraídos dos valores da borda e padding,
+       resultando no tamanho total passando no width e height 
+       largura total = 5 (borda esquerda) + 5 (borda direita) + 16 (padding esquerdo) + 16 (deireito) + 258 (conteudo = 300 - 5 - 5 - 16 - 16) 
+       */
+    box-sizing: border-box;
+    
+}

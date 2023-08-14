@@ -1,0 +1,37 @@
+body {
+    /*Fontes são adicionadas no index.html, seja como um link ou feito o download*/
+    font-family: 'Inconsolata', sans-serif;
+}
+
+h1 {
+    /* font-weight define o nível de grossura da fonte*/
+    /* font-weight: 700; */
+    /* tamanho padrão de h1 é 32px*/
+    font-size: 50px;
+    /* Muda se as palavras ou iniciais ficam em letra maiúscula ou minúscula*/
+    text-transform: capitalize;
+    text-decoration-line: underline;
+    text-decoration-color: blueviolet;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 20px ;
+    /* define tudo sobre text-decoration numa propriedade só*/
+    /* text-decoration: underline blueviolet dashed 20px; */
+    /* texto-align: right é diferent de end
+       assim como left é diferente de start. end e start são definidos
+       com base na linguagem utilizada. Se for num lingua em que é escrita
+       da direita pra esquerda, então o start é na direita e end na esquerda */
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    /* distância entre linhas */
+    line-height: 1.2;
+    /* distância entre letras */
+    letter-spacing: 5px;
+    text-align: justify;
+    /* é uma boa prática que textos tenham largura entre 45 e 80 caracteres,
+       e a unidade ch serve para ajudar a definir larguras com base na largura de um
+       caractere da fonte utilizada*/
+    max-width: 60ch;
+}
