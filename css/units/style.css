@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+ul {
+  /* o problema com pixels é que ele não acompanha o tamanho da fonte do navegador
+     de forma que se alguém alterar a fonte do navegador, tudo que não for definido
+     com pixel vai acompanhar, e o que foi definido com pixal não acompanha*/
+  /* pixal é uma unidade absoluta e unidades absolutas não escalam acompanhando browsers */
+  /* font-size: 16px; */
+  /* 1 rem é equivalente ao elemento root, e o elemento root nesse caso é o html
+     e o html tem um tamanho padrão de 16px*/
+  font-size: 1rem;
+}
+
+p {
+  background-color: lightblue;
+  padding: 0;
+  font-size: 2rem;
+  /* em é relativo ao font-size do próprio elemento. Se não achar no próprio elemento
+     procura no elemento imediatamente acima e assim sucessivamente */
+  padding-top: 1em;
+  /* é importante evitar definir font-size com em, pois fica difícil de saber qual será o 
+     o tamanho de fato no fim, pois como vamos saber qual é o tamnho raíz? */
+
+  /* é útil usar "em" quando estilizando botões */
+}
+
+div {
+  border: 1px solid red;
+  /* vh = viewport height - altura da tela atual */
+  /* 100 vh = 100% da altura disponível na tela */
+  height: 100vh;
+  /* vw = viewport width - largura disponível - não conta scrollbar*/
+  /* dvh  device viewport height = adaptativo ao dispositivo
+     leva em consideração quando fazemos scroll no smartphone
+     e a tela muda de tamanho porque alguma barra desaparece para
+     economizer espaço*/
+  height: 100dvh;
+}
+
+section {
+  border: 1px solid blue;
+  /* porcentagens funcionam quando o elemento pai tem uma dimensão definida definida */
+  height: 50%;
+}

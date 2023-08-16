@@ -1,0 +1,159 @@
+/* flexbox 
+   Layouts de uma dimensão:
+    Seguem apenas uma direção na tela
+     Um menu superior que tem uma logo na esquerda, navegação no meio
+     e botões de login na direita
+     Ou menu que fica fixa na esquerda e cresce de cima para baixo
+   Layouts de 2 dimensões
+    Seeguem mais de uma direção na tela
+     Galeria de fotos que cresce da esquerda para a direito e de
+     cima para baixo
+
+
+    Display
+     Elementos podem ser de nível de bloco (ocupam toda a largura da tela)
+     de nível de linha (ocupam o espaço necessário na linha para o seu conteúdo,
+     e outros elementos de linha podem ficar na mesma linha)
+     Podem ser de bloco de linha (se comporta semelhante ao de linha,
+     mas podem ter sua altura modificada e suas dimensões 
+     (incluindo padding-top/bottom e margin-top/bottom) são respeitados na renderização.
+*/
+
+h1,
+h2 {
+  border: 1px solid red;
+}
+
+p {
+  border: 1px solid red;
+}
+
+strong {
+  display: inline;
+  border: 1px solid red;
+  /* não empurra conteúdo abaixo e acima */
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+em {
+  border: 1px solid red;
+  /* não empurra conteúdo abaixo e acima */
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* botões são inline-block*/
+button {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+}
+
+/* o elemento pai dos elementos que queremos aplicar o flexbox tem
+que estar como display: flex */
+.container1 {
+  border: 1px solid blue;
+  height: 300px;
+  display: flex;
+  /* alinha os elementos ao longo do eixo principal*/
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: center;
+  /* align-items alinha no eixo secundário */
+  align-items: center;
+  /* gap adicoina espaço entre elementos */
+  gap: 5px 10px;
+}
+
+.container-wrap {
+  border: 1px solid blue;
+  height: 500px;
+  display: flex;
+  /* align-items alinha no eixo secundário */
+  /* quando existem muitos elementos a ponto deles não caberem
+     no espaço no seu tamanho definido, eles começam a encolher
+     O flex wrap faz com que caso isso ocorra, na mesma linha ficarão
+     apenas elementos na quantidade que caibam mantendo seu tamanho e
+     o restante irá para a linha seguinte
+     */
+  flex-wrap: wrap;
+  /* quando usamos wrap, temos ativada a propriedade align-content*/
+  /* mesmas opções do justify-content */
+  align-content: flex-start;
+  gap: 10px 5px;
+}
+
+.container2 {
+  border: 1px solid blue;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.container3 {
+  height: 300px;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.container4 {
+  height: 300px;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-evenly;
+  /* alinha o elemento à base da linha do texto */
+  align-items: baseline;
+}
+
+.container5 {
+  border: 1px solid blue;
+  display: flex;
+  /* o flexbox define por padrão que o eixo principal é o x, mas podemos
+       alterar isso com o flex-direction*/
+  flex-direction: column;
+  height: 600px;
+  justify-content: space-around;
+  align-items: center;
+}
+.item {
+  width: 100px;
+  height: 100px;
+  border: 5px solid red;
+  background-color: pink;
+}
+
+.item-2 {
+  font-size: 30px;
+}
+
+.item-3-self {
+  align-self: flex-end;
+}
+
+.item-1-colum {
+  /* flex grow define que os elementos tentarão preencher
+     o espaço que eles tem automaticamente */
+  flex-grow: 1;
+  /* flex-shrink define qual item vai encolher mais rapido
+       definir shinks diferentes para itens dentro de um container
+       flex, faz com que os itens encolham de foram diferente quando
+       a tela diminui ou aumenta*/
+  flex-shrink: 1;
+  /* flex: 1 = flex-grow 1 e flex-shrink 1 */
+  flex: 1;
+}
+
+.item-2-column {
+  flex-grow: 1;
+}
+
+.item-3-colum {
+  flex-grow: 2;
+}
