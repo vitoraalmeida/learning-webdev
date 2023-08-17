@@ -1,0 +1,59 @@
+.container {
+  border: 1px solid red;
+  width: 100%; /* em telas muito pequenas, a largura é 100% da tela */
+  /* a margem padrão será o que sobrar de cada lado após
+     preencher a largura predefinida (telas muito pequenas: 100 de largura -
+     sem margem, telas um pouco maiores: 475px de largura e o restante é 
+     margem automatica de cada lado centralizando o conteudo e assim
+     sucessivamente...)
+    */
+  margin-inline: auto; /* equivalente a margin: 0 auto; */
+  /* padding usado para distanciar o início do conteúdo/texto das bordas */
+  padding-inline: 0.5rem;
+}
+
+/*mobile first */
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+    /* o tamanho máximo que o conteúdo ocupa vai aumentando de forma que
+       até chegar no próximo breakpoint, ele não muda
+    */
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
