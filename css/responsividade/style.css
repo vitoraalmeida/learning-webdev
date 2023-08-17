@@ -1,0 +1,136 @@
+/* Responsividade é fazer com que o site se comporte de maneira
+   adequada em dispositivos de diferentes tamanhos e em orientações
+   de tela diferentes
+
+   A forma de fazer um site responsivo não é pensar em tornar ele todo
+   responsivo de vez, mas sim tornar cada componente responsivo;
+
+   */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* header */
+.header {
+  display: flex;
+  /* space-between distribui o espaço ao redor dos elementos
+     de forma igual, mas como o titulo é mais largo que os outros
+     conteúdos, os links do meio são deslocados para direita, fazenfo
+     com que não fiquem perfeitamente centralizados. Ao invés usamos o
+     flex: 1 em cada parte da barra superior, para que seus blocos
+     ocupem o mesmo espaço na tela horizontalmente, e posicionamos o
+     conteúdo das outras partes de forma que o título fique no início
+     e os botões */
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.header__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  flex: 1;
+}
+
+.header__menu {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #000;
+}
+
+.header__btn-container {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.header__bars {
+  display: none;
+}
+
+/* utility class */
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto; /* equivalente a margin: 0 auto; */
+}
+
+/* aplica as classes quando o width for menor ou igual ao passado px */
+/* (orientation: portrait) */
+/* (orientation: landscape) */
+/* (orientation: portrait) and (max-width: 300px) */
+/* (orientation: portrait), (max-width: 300px) = OR */
+/* devem ser declarado sempre após a ultima declaração de seletor que será modificado */
+@media (max-width: 1004px) {
+  .header__title {
+    font-size: 1.2rem;
+  }
+
+  .header__link {
+    font-size: 0.8rem;
+  }
+
+  .header__btn {
+    font-size: 0.8rem;
+  }
+}
+
+/* aplica as classes quando o width for menor que 804 px */
+@media (max-width: 804px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header__menu {
+    display: none;
+  }
+
+  .header__btn-container {
+    display: none;
+  }
+
+  .header__bars {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .header__title {
+    flex: 0 1 auto;
+  }
+}
